@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="connect4.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Connect 4!</title>
+</head>
+<body>
+    <div id="game">
+        <h1 id="gameheading">Connect 4</h1><br>
+        <button id = "resetbtn">Reset!</button>
+          <div id= "gamediv">
+            <div id= "inputs">
+              <div id="gridInputs">
+                <button id= "heightdecrease"> - </button><label for= "heightdecrease">Fewer rows</label><br>
+                <button id= "heightincrease"> + </button><label for= "heightincrease">More rows</label><br>
+                <button id= "widthdecrease"> < </button><label for= "widthdecrease">Fewer columns</label><br>
+                <button id= "widthincrease"> > </button><label for= "widthincrease">More columns</label><br>
+              </div>
+              <br>
+              <div id= "numberToWin">
+                  <button id= "connectmore"> + </button><label for= "connectmore">Connect +</label><br>
+                  <button id= "connectless"> - </button><label for= "connectless">Connect -</label><br>
+              </div>
+              <br>
+              <label for= "p1Color"> P1 color</label><input type="color" id="p1Color"><br>
+              <label for= "p2Color"> P2 color</label><input type="color" id="p2Color"><br>
+            </div>
+          <table id="gameboard"></table>
+        </div>
+    </div>
+    <script src="connect4.js"></script>
+</body>
+</html>
