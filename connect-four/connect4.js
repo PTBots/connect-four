@@ -121,7 +121,8 @@ function handleClick(evt) {
 
   // check for win
   if (checkForWin()) 
-    setTimeout(() => endGame(`Player ${currPlayer} won!`), 999);
+    {let currPlayerString = currPlayer;
+    setTimeout(() => endGame(`Player ${currPlayerString} won!`), 999);}
     
   // check for tie
   if (board.every(row => row.every(cell => cell))) { //check if all spaces on the board are filled w/o a winner, if so iniate tie
@@ -259,7 +260,7 @@ convertHexToRgb=(hex,trans)=>{
 }
 
 updateGameHeading = () => {
-  document.getElementById('gameheading').innerHTML = `Connect ${settings.connectNum}`;
+  document.getElementById('gameheading').innerText = `Connect ${settings.connectNum}`;
 }
 
 increaseGridHeight = () => {
@@ -317,8 +318,8 @@ document.getElementById('heightincrease').addEventListener('click', increaseGrid
 document.getElementById('heightdecrease').addEventListener('click', decreaseGridHeight);
 document.getElementById('widthincrease').addEventListener('click', increaseGridWidth);
 document.getElementById('widthdecrease').addEventListener('click', decreaseGridWidth);
-document.getElementById('connectmore').addEventListener('click', connectmore);
-document.getElementById('connectless').addEventListener('click', connectless);
+document.getElementById('connectmore').addEventListener('click', winNumIncrease);
+document.getElementById('connectless').addEventListener('click', winNumDecrease);
 document.getElementById('p1Color').addEventListener('change', colorChanger);
 document.getElementById('p2Color').addEventListener('change', colorChanger);
 document.getElementById('resetbtn').addEventListener('click', resetFunctions);
